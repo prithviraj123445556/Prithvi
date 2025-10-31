@@ -14,39 +14,45 @@ import ast, json, sys, re
 sys.path.insert(0, r"/home/newberry4/jay_data/")
 from Common_Functions.utils import TSL_PREMIUM, postgresql_query, resample_data, nearest_multiple, round_to_next_5_minutes_d
 from Common_Functions.utils import get_target_stoploss, get_open_range, check_crossover, compare_month_and_year
+import psycopg2
+from dotenv import load_dotenv
+import os
 
+# Load environment variables from .env file
+load_dotenv()
 
-
-def postgresql_query(input_query, input_tuples = None):
+def postgresql_query(input_query, input_tuples=None):
     try:
-        connection = psycopg2.connect( 
-            host = "192.168.18.18",
-            port = 5432,
-            database = "postgres",
-            user = "postgres",
-            password = "New@123",
-            # sslmode = "require"
+        # Read credentials from environment variables
+        connection = psycopg2.connect(
+            host=os.getenv("DB_HOST"),
+            port=os.getenv("DB_PORT"),
+            database=os.getenv("DB_NAME"),
+            user=os.getenv("DB_USER"),
+            password=os.getenv("DB_PASS"),
+            # sslmode="require"  # Uncomment if using SSL
         )
-        
+
         cursor = connection.cursor()
-        
+
+        # Execute query safely
         if input_tuples is not None:
             cursor.execute(input_query, input_tuples)
         else:
             cursor.execute(input_query)
-        
+
         data = cursor.fetchall()
-    
+
     except psycopg2.Error as e:
-        print('Error connecting to the database:', e)
+        print("❌ Error connecting to the database:", e)
         return e
-    
+
     else:
         if cursor:
             cursor.close()
         if connection:
             connection.close()
-        
+
         return data
 
 
