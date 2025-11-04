@@ -1,0 +1,6 @@
+,"NIFTY_candle_5T_range_[50, 50]_delta_0,3_time_11,45_pnl_threshold_2846.84.csv","NIFTY_candle_5T_range_[50, 50]_delta_0,35_time_13,00_pnl_threshold_3396.91.csv","NIFTY_candle_5T_range_[50, 50]_delta_0,3_time_13,00_pnl_threshold_2430.59.csv","NIFTY_candle_5T_range_[50, 50]_delta_0,4_time_09,30_pnl_threshold_8944.74.csv","NIFTY_candle_5T_range_[50, 50]_delta_0,35_time_10,15_pnl_threshold_5376.32.csv"
+"NIFTY_candle_5T_range_[50, 50]_delta_0,3_time_11,45_pnl_threshold_2846.84.csv",1.0,0.37825313266963356,0.39693396417592963,0.4095968886157569,0.34741249209916825
+"NIFTY_candle_5T_range_[50, 50]_delta_0,35_time_13,00_pnl_threshold_3396.91.csv",0.37825313266963356,1.0,0.7741027501980057,0.113439450779374,0.1601025467549923
+"NIFTY_candle_5T_range_[50, 50]_delta_0,3_time_13,00_pnl_threshold_2430.59.csv",0.39693396417592963,0.7741027501980057,1.0,0.12018119082121549,0.18748143672599424
+"NIFTY_candle_5T_range_[50, 50]_delta_0,4_time_09,30_pnl_threshold_8944.74.csv",0.4095968886157569,0.113439450779374,0.12018119082121549,1.0,0.6605454150461781
+"NIFTY_candle_5T_range_[50, 50]_delta_0,35_time_10,15_pnl_threshold_5376.32.csv",0.34741249209916825,0.1601025467549923,0.18748143672599424,0.6605454150461781,1.0

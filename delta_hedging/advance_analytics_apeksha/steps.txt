@@ -1,0 +1,5 @@
+1 min pnl delta
+create buckets
+analytics for delta
+log non rentry analytics
+google sheet format
